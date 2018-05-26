@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+
+}
+
+h2 {
+    font-family:'Permanent Marker', cursive;
+    font-size: 20px;
+}
+
+body {
+    background-color: hotpink;
+}
+
+.jumbotron{
+    background-color: aquamarine;
+}
