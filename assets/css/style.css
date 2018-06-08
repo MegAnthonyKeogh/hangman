@@ -1,18 +1,38 @@
 h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 60px;
+    margin: 20px;
+    
 
 }
 
 h2 {
     font-family:'Permanent Marker', cursive;
     font-size: 20px;
+    margin: 15px;
 }
 
 body {
     background-color: hotpink;
+    text-align: center;
 }
 
 .jumbotron{
     background-color: aquamarine;
+    align-content: center
+}
+
+.Userinput{
+height: 100px;
+widows: 100%;
+background-color: azure;
+}
+
+.blankSpaces {
+    font-size: 70px;
+}
+
+.button {
+    padding: 15px 32px;
+    border-radius: 12px;
 }
