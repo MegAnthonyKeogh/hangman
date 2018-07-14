@@ -66,7 +66,7 @@ function startGame () {
     document.getElementById("winCount").innerHTML = wins;
     document.getElementById("lossCount").innerHTML = losses;
     document.getElementById("guessLeft").innerHTML = guessLeft;
-    document.getElementById("hints-image").src = hintPic;
+    document.getElementById("hints-image").src=hintPic;
  }
 // debugging
     console.log (wordGen);
