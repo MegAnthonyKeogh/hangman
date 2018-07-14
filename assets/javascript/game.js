@@ -19,6 +19,7 @@ var numBlanks = 0;
 var blanksAndSuccesses = [];
 var wrongLetters = [];
 var isLetterInWord; 
+var randNum = 0;
 //var button = document.getElementsByClassName("button");
 
 //counters
@@ -36,7 +37,8 @@ startGame();
 //************************************************************************** */
 
 function startGame () { 
-             wordGen = wordBank[Math.floor(Math.random() * wordBank.length)];
+            randNum = Math.floor(Math.random() * wordBank.length)
+            wordGen = wordBank[randNum];
              lettersInWord = wordGen.split("");
              numBlanks = lettersInWord.length;
 
@@ -59,6 +61,7 @@ function startGame () {
     document.getElementById("winCount").innerHTML = wins;
     document.getElementById("lossCount").innerHTML = losses;
     document.getElementById("guessLeft").innerHTML = guessLeft;
+    document.getElementById("hints-image").src = hintPic;
  }
 // debugging
     console.log (wordGen);
