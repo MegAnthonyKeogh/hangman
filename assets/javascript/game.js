@@ -40,8 +40,10 @@ startGame();
 function startGame () { 
             randNum = Math.floor(Math.random() * wordBank.length)
             wordGen = wordBank[randNum];
+             
             lettersInWord = wordGen.split("");
             numBlanks = lettersInWord.length;
+             hintPic = hints[randNum];
 
            
             // reset counters
