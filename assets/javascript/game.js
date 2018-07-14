@@ -40,12 +40,12 @@ startGame();
 function startGame () { 
             randNum = Math.floor(Math.random() * wordBank.length)
             wordGen = wordBank[randNum];
-             
             lettersInWord = wordGen.split("");
             numBlanks = lettersInWord.length;
-             hintPic = hints[randNum];
 
-           
+            //  hints.indexOf(i) == wordBank.indexOf(i);
+             hintPic = hints[randNum]; 
+            
             // reset counters
                  guessLeft = 8;
                  blanksAndSuccesses = [];
@@ -149,21 +149,6 @@ if (isLetterInWord) {
 startGame();
 console.log(wordGen);
    
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
 
 
 
