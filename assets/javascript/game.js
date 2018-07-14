@@ -42,9 +42,6 @@ function startGame () {
              lettersInWord = wordGen.split("");
              numBlanks = lettersInWord.length;
 
-             hints.indexOf(i) == wordBank.indexOf(i);
-             hintPic == WordGen 
-
             // reset counters
                  guessLeft = 8;
                  blanksAndSuccesses = [];
