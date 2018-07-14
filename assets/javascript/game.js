@@ -1,7 +1,7 @@
 $(document).ready(function(){
 })
-// global variables
-//************************************************************************* */
+/*global variables
+************************************************************************* */
 var wordBank = [  "dip", "wazzzup", "phat", "stylin", "trippin","wack","dibs", "booyah"];
 var hints = ["assets/image/diphint.gif",
             "assets/images/wazzzuphint.gif", 
@@ -11,6 +11,7 @@ var hints = ["assets/image/diphint.gif",
             "assets/images/wack.gif",
             "assets/images/dibs.jpeg",
             "assets/images/booyah.gif"]
+
 
 var wordGen = "";
 var hintPic = [];
@@ -39,9 +40,12 @@ startGame();
 function startGame () { 
             randNum = Math.floor(Math.random() * wordBank.length)
             wordGen = wordBank[randNum];
-             lettersInWord = wordGen.split("");
-             numBlanks = lettersInWord.length;
+            lettersInWord = wordGen.split("");
+            numBlanks = lettersInWord.length;
 
+            //  hints.indexOf(i) == wordBank.indexOf(i);
+            //  hintPic = hints[randNum]; 
+            
             // reset counters
                  guessLeft = 8;
                  blanksAndSuccesses = [];
@@ -50,7 +54,11 @@ function startGame () {
             // create and fill in blanks with correct words
 
             for (i = 0; i< numBlanks; i++) {
-            blanksAndSuccesses.push("_");
+                if(lettersInWord[i] === " "){
+                    blanksAndSuccesses.push("&nbsp;");
+                } else {
+                    blanksAndSuccesses.push("_")
+                };
             }
 
     //changing html/DOM
@@ -103,7 +111,9 @@ if (isLetterInWord) {
             guessLeft--;
            
         }
-    }   
+    }  
+    
+
 // final counts and updates after each game
  function roundComplete () {
     
@@ -112,7 +122,12 @@ if (isLetterInWord) {
     document.getElementById("blankSpaces").innerHTML = blanksAndSuccesses.join(" ");
     document.getElementById("wrongLetters").innerHTML = wrongLetters.join(" ");
 
-    
+    for(var i = 0; i< blanksAndSuccesses.length; i++) {
+        if (blanksAndSuccesses[i] === "&nbsp;") {
+            blanksAndSuccesses[i] === " "; 
+            console.log("Blanks " + blanksAndSuccesses);
+        } 
+    }
     
     if (lettersInWord.toString() === blanksAndSuccesses.toString()){
         wins++;
@@ -134,9 +149,6 @@ if (isLetterInWord) {
 startGame();
 console.log(wordGen);
    
-
-
-
 
 
 
