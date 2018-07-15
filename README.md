@@ -7,3 +7,5 @@ I was motivated to build this game for two reasons. First, I wanted to test my n
 
 In the future, I would like to clean up some of the CSS and make it more mobile-friendly, as well as add phrases instead of only single words. 
 
+The issues I faced in building this application were really based on learning JavaScript logic, and how to apply it sothat my game functioned in real-time. 
+
